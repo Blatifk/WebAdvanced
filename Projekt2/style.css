@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+
+header {
+    height: 70px;
+
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #111;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+header h2 {
+    font-size: 28px;
+}
+
+header span {
+    color: #087cff;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #087cff;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 85vh;
+
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            #000 15%,
+            rgba(0,0,0,.7),
+            transparent
+        ),
+        url("images/m4.jpg")
+        center / cover;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero p {
+    color: #087cff;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 65px;
+
+    line-height: 1;
+
+    margin: 20px 0 35px;
+}
+
+.hero span {
+    color: #087cff;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #087cff;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #005dcc;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================= CARS ================= */
+
+.cars {
+    padding: 80px 8%;
+}
+
+.cars > h2,
+.categories > h2,
+.why > h2,
+.test-drive > h2,
+.contact > h2 {
+    text-align: center;
+
+    font-size: 40px;
+
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    background: #151515;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    padding-bottom: 20px;
+
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.5);
+}
+
+.card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 18px 20px 8px;
+}
+
+.card p {
+    color: #999;
+
+    margin: 0 20px 10px;
+}
+
+.card strong {
+    color: #087cff;
+
+    margin-left: 20px;
+
+    font-size: 20px;
+}
+
+
+/* ================= CATEGORIES ================= */
+
+.categories {
+    padding: 80px 8%;
+
+    background: #0d0d0d;
+}
+
+.category-box {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.category-box div {
+    padding: 40px 20px;
+
+    background: #151515;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.category-box div:hover {
+    background: #087cff;
+
+    transform: translateY(-8px);
+}
+
+.category-box p {
+    color: #999;
+
+    margin-top: 10px;
+}
+
+.category-box div:hover p {
+    color: white;
+}
+
+
+/* ================= WHY BMW ================= */
+
+.why {
+    padding: 80px 8%;
+
+    background: #111;
+
+    text-align: center;
+}
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.why-grid div {
+    padding: 30px 20px;
+
+    background: #181818;
+
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.why-grid div:hover {
+    transform: translateY(-5px);
+
+    border-bottom: 3px solid #087cff;
+}
+
+.why-grid span {
+    font-size: 35px;
+}
+
+.why-grid h3 {
+    margin: 15px 0;
+}
+
+.why-grid p {
+    color: #999;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ================= BMW M ================= */
+
+.bmw-m {
+    height: 500px;
+
+    padding: 0 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            #000 15%,
+            rgba(0,0,0,.7),
+            transparent
+        ),
+        url("images/bmw-m.jpg")
+        center / cover;
+}
+
+.bmw-m p {
+    color: #087cff;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.bmw-m h2 {
+    font-size: 60px;
+
+    line-height: 1;
+
+    margin: 20px 0 30px;
+}
+
+.bmw-m a {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    background: #087cff;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+}
+
+.bmw-m a:hover {
+    background: #005dcc;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 80px 8%;
+
+    text-align: center;
+
+    background: #0d0d0d;
+}
+
+.about h2 {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #aaa;
+
+    line-height: 1.7;
+}
+
+
+/* ================= TEST DRIVE ================= */
+
+.test-drive {
+    padding: 80px 8%;
+
+    text-align: center;
+}
+
+.test-drive > p {
+    color: #999;
+
+    margin-top: -25px;
+
+    margin-bottom: 30px;
+}
+
+.test-drive form,
+.contact form {
+    max-width: 600px;
+
+    margin: auto;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    margin: 7px 0;
+
+    background: #151515;
+
+    color: white;
+
+    border: 1px solid #333;
+
+    border-radius: 5px;
+
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #087cff;
+}
+
+textarea {
+    height: 120px;
+
+    resize: none;
+}
+
+button {
+    padding: 14px 30px;
+
+    margin-top: 15px;
+
+    background: #087cff;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+button:hover {
+    background: #005dcc;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    padding: 80px 8%;
+
+    text-align: center;
+
+    background: #111;
+}
+
+.contact > p {
+    color: #999;
+
+    margin-top: -25px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #050505;
+
+    color: #777;
+}
+
+footer h3 {
+    color: white;
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+footer span {
+    color: #087cff;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        height: 75vh;
+
+        padding: 0 7%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-box {
+        grid-template-columns: 1fr;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bmw-m {
+        height: 400px;
+    }
+
+    .bmw-m h2 {
+        font-size: 45px;
+    }
+
+    .cars > h2,
+    .categories > h2,
+    .why > h2,
+    .test-drive > h2,
+    .contact > h2 {
+        font-size: 32px;
+    }
+}
