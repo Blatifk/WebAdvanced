@@ -1,337 +1,450 @@
-<!DOCTYPE html>
-<html lang="en">
 
+<!DOCTYPE html>
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>BMW Dealership</title>
-
+    <title>Blini's BMW Dealership</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<header>
+    <h2>BMW<span>.</span></h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#cars">Cars</a>
+        <a href="#explore">Explore BMW</a>
+        <a href="#about">About</a>
+        <a href="#test">Test Drive</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <header>
+<section class="hero">
+    <div>
+        <p>THE ULTIMATE DRIVING MACHINE</p>
+        <h1>BMW M4<br><span>COMPETITION</span></h1>
+        <a class="btn" href="#explore">Explore BMW</a>
+    </div>
+</section>
 
-        <h2>BMW<span>.</span></h2>
+<section id="cars" class="cars">
+    <h2>Our BMW Collection</h2>
+    <div class="grid">
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#cars">Cars</a>
-            <a href="#about">About</a>
-            <a href="#test">Test Drive</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-    </header>
-
-
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <p>THE ULTIMATE DRIVING MACHINE</p>
-
-            <h1>
-                BMW M4
-                <br>
-                <span>COMPETITION</span>
-            </h1>
-
-            <a href="#cars" class="btn">
-                Explore Cars
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-    <section id="cars" class="cars">
-
-        <h2>Our BMW Collection</h2>
-
-        <div class="grid">
-
-            <div class="card">
-
-                <img src="images/m4.jpg" alt="BMW M4">
-
+        <article class="car-card">
+            <img src="images/m4.jpg" alt="BMW M4"
+                 onclick="openGallery('m4')">
+            <div class="car-info">
                 <h3>BMW M4 Competition</h3>
-
                 <p>503 HP • Automatic</p>
-
                 <strong>$85,000</strong>
-
             </div>
+        </article>
 
-
-            <div class="card">
-
-                <img src="images/m5.jpg" alt="BMW M5">
-
+        <article class="car-card">
+            <img src="images/m5.jpg" alt="BMW M5"
+                 onclick="openGallery('m5')">
+            <div class="car-info">
                 <h3>BMW M5</h3>
-
                 <p>617 HP • Automatic</p>
-
                 <strong>$110,000</strong>
-
             </div>
+        </article>
 
-
-            <div class="card">
-
-                <img src="images/x5.jpg" alt="BMW X5">
-
+        <article class="car-card">
+            <img src="images/x5.jpg" alt="BMW X5"
+                 onclick="openGallery('x5')">
+            <div class="car-info">
                 <h3>BMW X5</h3>
-
-                <p>335 HP • SUV</p>
-
+                <p>335 HP • Automatic</p>
                 <strong>$72,000</strong>
-
             </div>
+        </article>
 
-        </div>
+    </div>
+</section>
 
-    </section>
-
-
-    <section class="categories">
-
+<section id="explore" class="categories">
+    <div class="section-heading">
+        <p class="eyebrow">FIND YOUR BMW</p>
         <h2>Explore BMW</h2>
+        <p>Choose your series and discover your favourite model.</p>
+    </div>
 
-        <div class="category-box">
+    <div class="category-box">
 
-            <div>
+        <article class="category-card">
+            <div class="category-image m-image">
+                <span>BMW M</span>
                 <h3>M Series</h3>
-                <p>Performance & Power</p>
+                <p>Performance without compromise.</p>
             </div>
 
-            <div>
+            <div class="model-list">
+                <button onclick="openModel('m2')">BMW M2 <span>↗</span></button>
+                <button onclick="openModel('m3')">BMW M3 <span>↗</span></button>
+                <button onclick="openModel('m4')">BMW M4 <span>↗</span></button>
+                <button onclick="openModel('m5')">BMW M5 <span>↗</span></button>
+                <button onclick="openModel('m6')">BMW M6 <span>↗</span></button>
+                <button onclick="openModel('m8')">BMW M8 <span>↗</span></button>
+                <button onclick="openModel('xm')">BMW XM <span>↗</span></button>
+            </div>
+
+            <button class="series-toggle"
+                    aria-expanded="false"
+                    onclick="toggleModels(this)">
+                Explore M Series <span>＋</span>
+            </button>
+        </article>
+
+        <article class="category-card">
+            <div class="category-image x-image">
+                <span>BMW X</span>
                 <h3>X Series</h3>
-                <p>Luxury SUVs</p>
+                <p>Luxury meets adventure.</p>
             </div>
 
-            <div>
+            <div class="model-list">
+                <button onclick="openModel('x1')">BMW X1 <span>↗</span></button>
+                <button onclick="openModel('x2')">BMW X2 <span>↗</span></button>
+                <button onclick="openModel('x3')">BMW X3 <span>↗</span></button>
+                <button onclick="openModel('x4')">BMW X4 <span>↗</span></button>
+                <button onclick="openModel('x5')">BMW X5 <span>↗</span></button>
+                <button onclick="openModel('x6')">BMW X6 <span>↗</span></button>
+                <button onclick="openModel('x7')">BMW X7 <span>↗</span></button>
+            </div>
+
+            <button class="series-toggle"
+                    aria-expanded="false"
+                    onclick="toggleModels(this)">
+                Explore X Series <span>＋</span>
+            </button>
+        </article>
+
+        <article class="category-card">
+            <div class="category-image i-image">
+                <span>BMW i</span>
                 <h3>i Series</h3>
-                <p>Electric Future</p>
+                <p>Electric innovation for tomorrow.</p>
             </div>
 
-        </div>
-
-    </section>
-
-
-
-    <section class="why">
-
-        <h2>Why Choose BMW?</h2>
-
-        <div class="why-grid">
-
-            <div>
-                <span></span>
-
-                <h3>Performance</h3>
-
-                <p>
-                    Powerful engines and
-                    incredible driving experience.
-                </p>
+            <div class="model-list">
+                <button onclick="openModel('i4')">BMW i4 <span>↗</span></button>
+                <button onclick="openModel('i5')">BMW i5 <span>↗</span></button>
+                <button onclick="openModel('i7')">BMW i7 <span>↗</span></button>
+                <button onclick="openModel('ix')">BMW iX <span>↗</span></button>
+                <button onclick="openModel('ix2')">BMW iX2 <span>↗</span></button>
+                <button onclick="openModel('ix3')">BMW iX3 <span>↗</span></button>
             </div>
 
-
-            <div>
-                <span></span>
-
-                <h3>Luxury</h3>
-
-                <p>
-                    Premium design, comfort
-                    and modern technology.
-                </p>
-            </div>
-
-
-            <div>
-                <span></span>
-
-                <h3>Electric</h3>
-
-                <p>
-                    Experience the future
-                    with BMW electric vehicles.
-                </p>
-            </div>
-
-
-            <div>
-                <span></span>
-
-                <h3>Safety</h3>
-
-                <p>
-                    Advanced technology
-                    designed for your safety.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <section class="bmw-m">
-
-        <div>
-
-            <p>BMW M</p>
-
-            <h2>
-                BORN FOR
-                <br>
-                THE TRACK.
-            </h2>
-
-            <a href="#cars">
-                Explore BMW M
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-    <section id="about" class="about">
-
-        <h2>Why BMW?</h2>
-
-        <p>
-            BMW combines luxury, performance and
-            innovative technology to create an
-            unforgettable driving experience.
-        </p>
-
-    </section>
-
-
-    <section id="test" class="test-drive">
-
-        <h2>Book a Test Drive</h2>
-
-        <p>
-            Experience your dream BMW yourself.
-        </p>
-
-        <form>
-
-            <input
-                type="text"
-                placeholder="Your Name"
-                required
-            >
-
-            <input
-                type="email"
-                placeholder="Your Email"
-                required
-            >
-
-            <select required>
-
-                <option value="">
-                    Select BMW
-                </option>
-
-                <option>
-                    BMW M3
-                </option>
-
-                <option>
-                    BMW M4
-                </option>
-
-                <option>
-                    BMW M5
-                </option>
-
-                <option>
-                    BMW X5
-                </option>
-
-                <option>
-                    BMW X7
-                </option>
-
-                <option>
-                    BMW i7
-                </option>
-
-            </select>
-
-            <input
-                type="date"
-                required
-            >
-
-            <button type="submit">
-                BOOK NOW
+            <button class="series-toggle"
+                    aria-expanded="false"
+                    onclick="toggleModels(this)">
+                Explore i Series <span>＋</span>
             </button>
+        </article>
 
-        </form>
+    </div>
+</section>
 
-    </section>
+<div id="modelModal" class="model-modal"
+     role="dialog" aria-modal="true"
+     aria-labelledby="modelTitle">
 
+    <div class="model-content">
+        <button class="close-model" onclick="closeModel()"
+                aria-label="Close">&times;</button>
 
+        <p class="eyebrow">DISCOVER YOUR BMW</p>
+        <h2 id="modelTitle">BMW M3</h2>
 
-    <section id="contact" class="contact">
+        <img id="modelPhoto" src="" alt="BMW model">
 
-        <h2>Contact Us</h2>
-
-        <p>
-            Have a question? Send us a message.
+        <p id="modelError" hidden>
+            Photo not found. Check the filename in your images folder.
         </p>
 
-        <form>
+        <a href="#test" class="btn" onclick="closeModel()">
+            Book a Test Drive
+        </a>
+    </div>
+</div>
 
-            <input
-                type="text"
-                placeholder="Your Name"
-            >
+<section class="why">
+    <h2>Why Choose BMW?</h2>
+    <div class="why-grid">
+        <article>
+            <span></span>
+            <h3>Performance</h3>
+            <p>Powerful engines and an incredible driving experience.</p>
+        </article>
+        <article>
+            <span></span>
+            <h3>Luxury</h3>
+            <p>Premium design, comfort and modern technology.</p>
+        </article>
+        <article>
+            <span></span>
+            <h3>Electric</h3>
+            <p>Experience the future with electric vehicles.</p>
+        </article>
+        <article>
+            <span></span>
+            <h3>Safety</h3>
+            <p>Advanced technology designed with safety in mind.</p>
+        </article>
+    </div>
+</section>
 
-            <input
-                type="email"
-                placeholder="Your Email"
-            >
+<section class="bmw-m">
+    <div>
+        <p>BMW M</p>
+        <h2>BORN FOR<br>THE TRACK.</h2>
+        <a href="#explore">Explore BMW M</a>
+    </div>
+</section>
 
-            <textarea
-                placeholder="Your Message">
-            </textarea>
+<section id="about" class="about">
+    <h2>Why BMW?</h2>
+    <p>
+        BMW combines luxury, performance and innovative technology
+        to create an unforgettable driving experience.
+    </p>
+</section>
 
-            <button type="submit">
-                Send Message
-            </button>
+<section id="test" class="test-drive">
+    <h2>Book a Test Drive</h2>
+    <p>Experience your dream BMW yourself.</p>
 
-        </form>
+    <form id="testForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
 
-    </section>
+        <select id="testModel" required>
+            <option value="">Select BMW</option>
+            <option>BMW M2</option>
+            <option>BMW M3</option>
+            <option>BMW M4</option>
+            <option>BMW M5</option>
+            <option>BMW M6</option>
+            <option>BMW M8</option>
+            <option>BMW XM</option>
+            <option>BMW X1</option>
+            <option>BMW X2</option>
+            <option>BMW X3</option>
+            <option>BMW X4</option>
+            <option>BMW X5</option>
+            <option>BMW X6</option>
+            <option>BMW X7</option>
+            <option>BMW i4</option>
+            <option>BMW i5</option>
+            <option>BMW i7</option>
+            <option>BMW iX</option>
+            <option>BMW iX2</option>
+            <option>BMW iX3</option>
+        </select>
 
+        <input type="date" required>
+        <button type="submit">BOOK NOW</button>
+        <p id="testMessage" class="form-message" hidden></p>
+    </form>
+</section>
 
-    <footer>
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have a question? Send us a message.</p>
 
-        <h3>BMW<span>.</span></h3>
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="contactMessage" class="form-message" hidden></p>
+    </form>
+</section>
 
-        <p>
-            © 2026 BMW Dealership
-        </p>
+<footer>
+    <h3>BMW<span>.</span></h3>
+    <p>© 2026 Blinis BMW Dealership</p>
+</footer>
 
-    </footer>
+<div id="galleryModal" class="gallery-modal"
+     role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+    <div class="gallery-content">
+        <button class="gallery-close" onclick="closeGallery()"
+                aria-label="Close gallery">&times;</button>
+        <h2 id="galleryTitle">BMW Interior</h2>
+        <div id="galleryImages" class="gallery-images"></div>
+    </div>
+</div>
+
+<script>
+const bmwModels = {
+    m2:  { name: "BMW M2",  image: "images/m2.jpg" },
+    m3:  { name: "BMW M3",  image: "images/m3.jpg" },
+    m4:  { name: "BMW M4",  image: "images/m4.jpg" },
+    m5:  { name: "BMW M5",  image: "images/m5.jpg" },
+    m6:  { name: "BMW M6",  image: "images/m6.jpg" },
+    m8:  { name: "BMW M8",  image: "images/m8.jpg" },
+    xm:  { name: "BMW XM",  image: "images/xm.jpg" },
+
+    x1:  { name: "BMW X1",  image: "images/x1.jpg" },
+    x2:  { name: "BMW X2",  image: "images/x2.jpg" },
+    x3:  { name: "BMW X3",  image: "images/x3.jpg" },
+    x4:  { name: "BMW X4",  image: "images/x4.jpg" },
+    x5:  { name: "BMW X5",  image: "images/x5.jpg" },
+    x6:  { name: "BMW X6",  image: "images/x6.jpg" },
+    x7:  { name: "BMW X7",  image: "images/x7.jpg" },
+
+    i4:  { name: "BMW i4",  image: "images/i4.jpg" },
+    i5:  { name: "BMW i5",  image: "images/i5.jpg" },
+    i7:  { name: "BMW i7",  image: "images/i7.jpg" },
+    ix:  { name: "BMW iX",  image: "images/ix.jpg" },
+    ix2: { name: "BMW iX2", image: "images/ix2.jpg" },
+    ix3: { name: "BMW iX3", image: "images/ix3.jpg" }
+};
+
+function toggleModels(button) {
+    const card = button.closest(".category-card");
+    const opened = card.classList.toggle("models-open");
+
+    button.setAttribute("aria-expanded", opened);
+    button.querySelector("span").textContent = opened ? "−" : "＋";
+}
+
+function openModel(key) {
+    const model = bmwModels[key];
+    if (!model) return;
+
+    const modal = document.getElementById("modelModal");
+    const photo = document.getElementById("modelPhoto");
+    const error = document.getElementById("modelError");
+
+    document.getElementById("modelTitle").textContent = model.name;
+
+    photo.hidden = false;
+    error.hidden = true;
+    photo.alt = model.name;
+    photo.src = model.image;
+
+    photo.onload = function () {
+        photo.hidden = false;
+        error.hidden = true;
+    };
+
+    photo.onerror = function () {
+        photo.hidden = true;
+        error.hidden = false;
+    };
+
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+
+    const select = document.getElementById("testModel");
+    for (const option of select.options) {
+        if (option.text === model.name) {
+            select.value = option.value;
+            break;
+        }
+    }
+
+    modal.querySelector(".close-model").focus();
+}
+
+function closeModel() {
+    document.getElementById("modelModal").classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+document.getElementById("modelModal").addEventListener("click", function (event) {
+    if (event.target === this) closeModel();
+});
+
+const carGalleries = {
+    m4: {
+        title: "BMW M4 Competition Interior",
+        images: [
+            "images/m4-interior-1.jpg",
+            "images/m4-interior-2.jpg",
+            "images/m4-interior-3.jpg",
+            "images/m4-interior-4.jpg"
+        ]
+    },
+    m5: {
+        title: "BMW M5 Interior",
+        images: [
+            "images/m5-interior-1.jpg",
+            "images/m5-interior-2.jpg",
+            "images/m5-interior-3.jpg",
+            "images/m5-interior-4.jpg"
+        ]
+    },
+    x5: {
+        title: "BMW X5 Interior",
+        images: [
+            "images/x5-interior-1.jpg",
+            "images/x5-interior-2.jpg",
+            "images/x5-interior-3.jpg",
+            "images/x5-interior-4.jpg"
+        ]
+    }
+};
+
+function openGallery(car) {
+    const gallery = carGalleries[car];
+    if (!gallery) return;
+
+    const modal = document.getElementById("galleryModal");
+    const container = document.getElementById("galleryImages");
+
+    document.getElementById("galleryTitle").textContent = gallery.title;
+    container.innerHTML = "";
+
+    gallery.images.forEach((src, index) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = gallery.title + " photo " + (index + 1);
+        img.onerror = function () { this.remove(); };
+        container.appendChild(img);
+    });
+
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+    modal.querySelector(".gallery-close").focus();
+}
+
+function closeGallery() {
+    document.getElementById("galleryModal").classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+document.getElementById("galleryModal").addEventListener("click", function (event) {
+    if (event.target === this) closeGallery();
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closeModel();
+        closeGallery();
+    }
+});
+
+document.getElementById("testForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const message = document.getElementById("testMessage");
+    message.textContent = "Thank you! Connect a booking service to receive your request.";
+    message.hidden = false;
+});
+
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const message = document.getElementById("contactMessage");
+    message.textContent = "Thank you! Connect an email service to receive your message.";
+    message.hidden = false;
+});
+</script>
 
 </body>
-
 </html>
