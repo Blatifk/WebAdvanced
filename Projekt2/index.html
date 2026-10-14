@@ -10,7 +10,7 @@
 <body>
 
 <header>
-    <h2>BMW<span>.</span></h2>
+    <h2> Blini's BMW Dealership</h2>
     <nav>
         <a href="#">Home</a>
         <a href="#cars">Cars</a>
@@ -66,6 +66,7 @@
     </div>
 </section>
 
+
 <section id="explore" class="categories">
     <div class="section-heading">
         <p class="eyebrow">FIND YOUR BMW</p>
@@ -92,8 +93,7 @@
                 <button onclick="openModel('xm')">BMW XM <span>↗</span></button>
             </div>
 
-            <button class="series-toggle"
-                    aria-expanded="false"
+            <button class="series-toggle" aria-expanded="false"
                     onclick="toggleModels(this)">
                 Explore M Series <span>＋</span>
             </button>
@@ -116,8 +116,7 @@
                 <button onclick="openModel('x7')">BMW X7 <span>↗</span></button>
             </div>
 
-            <button class="series-toggle"
-                    aria-expanded="false"
+            <button class="series-toggle" aria-expanded="false"
                     onclick="toggleModels(this)">
                 Explore X Series <span>＋</span>
             </button>
@@ -139,8 +138,7 @@
                 <button onclick="openModel('ix3')">BMW iX3 <span>↗</span></button>
             </div>
 
-            <button class="series-toggle"
-                    aria-expanded="false"
+            <button class="series-toggle" aria-expanded="false"
                     onclick="toggleModels(this)">
                 Explore i Series <span>＋</span>
             </button>
@@ -150,8 +148,7 @@
 </section>
 
 <div id="modelModal" class="model-modal"
-     role="dialog" aria-modal="true"
-     aria-labelledby="modelTitle">
+     role="dialog" aria-modal="true" aria-labelledby="modelTitle">
 
     <div class="model-content">
         <button class="close-model" onclick="closeModel()"
@@ -166,11 +163,57 @@
             Photo not found. Check the filename in your images folder.
         </p>
 
+        <div class="model-price">
+            <span>Estimated price</span>
+            <strong id="modelPrice"></strong>
+        </div>
+
+        <div class="spec-grid">
+            <div class="spec-item">
+                <span>Year</span>
+                <strong id="modelYear"></strong>
+            </div>
+            <div class="spec-item">
+                <span>Engine / Motor</span>
+                <strong id="modelEngine"></strong>
+            </div>
+            <div class="spec-item">
+                <span>Power</span>
+                <strong id="modelPower"></strong>
+            </div>
+            <div class="spec-item">
+                <span>Transmission</span>
+                <strong id="modelTransmission"></strong>
+            </div>
+            <div class="spec-item">
+                <span>Fuel / Powertrain</span>
+                <strong id="modelFuel"></strong>
+            </div>
+            <div class="spec-item">
+                <span>0–100 km/h</span>
+                <strong id="modelAcceleration"></strong>
+            </div>
+            <div class="spec-item">
+                <span>Top speed</span>
+                <strong id="modelTopSpeed"></strong>
+            </div>
+            <div class="spec-item">
+                <span>Drivetrain</span>
+                <strong id="modelDrive"></strong>
+            </div>
+        </div>
+
+        <p class="model-note">
+            Prices and specifications are estimates and may vary by model year,
+            equipment, condition and market.
+        </p>
+
         <a href="#test" class="btn" onclick="closeModel()">
             Book a Test Drive
         </a>
     </div>
 </div>
+
 
 <section class="why">
     <h2>Why Choose BMW?</h2>
@@ -224,26 +267,16 @@
 
         <select id="testModel" required>
             <option value="">Select BMW</option>
-            <option>BMW M2</option>
-            <option>BMW M3</option>
-            <option>BMW M4</option>
-            <option>BMW M5</option>
-            <option>BMW M6</option>
-            <option>BMW M8</option>
-            <option>BMW XM</option>
-            <option>BMW X1</option>
-            <option>BMW X2</option>
-            <option>BMW X3</option>
-            <option>BMW X4</option>
-            <option>BMW X5</option>
-            <option>BMW X6</option>
-            <option>BMW X7</option>
-            <option>BMW i4</option>
-            <option>BMW i5</option>
-            <option>BMW i7</option>
-            <option>BMW iX</option>
-            <option>BMW iX2</option>
-            <option>BMW iX3</option>
+            <option>BMW M2</option><option>BMW M3</option>
+            <option>BMW M4</option><option>BMW M5</option>
+            <option>BMW M6</option><option>BMW M8</option>
+            <option>BMW XM</option><option>BMW X1</option>
+            <option>BMW X2</option><option>BMW X3</option>
+            <option>BMW X4</option><option>BMW X5</option>
+            <option>BMW X6</option><option>BMW X7</option>
+            <option>BMW i4</option><option>BMW i5</option>
+            <option>BMW i7</option><option>BMW iX</option>
+            <option>BMW iX2</option><option>BMW iX3</option>
         </select>
 
         <input type="date" required>
@@ -282,34 +315,33 @@
 
 <script>
 const bmwModels = {
-    m2:  { name: "BMW M2",  image: "images/m2.jpg" },
-    m3:  { name: "BMW M3",  image: "images/m3.jpg" },
-    m4:  { name: "BMW M4",  image: "images/m4.jpg" },
-    m5:  { name: "BMW M5",  image: "images/m5.jpg" },
-    m6:  { name: "BMW M6",  image: "images/m6.jpg" },
-    m8:  { name: "BMW M8",  image: "images/m8.jpg" },
-    xm:  { name: "BMW XM",  image: "images/xm.jpg" },
+    m2:  {name:"BMW M2", image:"images/m2.jpg", price:"$65,000", year:"2025", engine:"3.0L Turbo I6", power:"473 HP", transmission:"Automatic / Manual", fuel:"Petrol", acceleration:"4.1 seconds", topSpeed:"250 km/h", drive:"RWD"},
+    m3:  {name:"BMW M3", image:"images/m3.jpg", price:"$80,000", year:"2025", engine:"3.0L Turbo I6", power:"473–523 HP", transmission:"Automatic / Manual", fuel:"Petrol", acceleration:"3.5–4.1 seconds", topSpeed:"250 km/h", drive:"RWD / AWD"},
+    m4:  {name:"BMW M4", image:"images/m4.jpg", price:"$85,000", year:"2025", engine:"3.0L Turbo I6", power:"473–523 HP", transmission:"Automatic / Manual", fuel:"Petrol", acceleration:"3.5–4.1 seconds", topSpeed:"250 km/h", drive:"RWD / AWD"},
+    m5:  {name:"BMW M5", image:"images/m5.jpg", price:"$110,000", year:"2025", engine:"4.4L Twin-Turbo V8 Hybrid", power:"717 HP", transmission:"8-speed automatic", fuel:"Plug-in hybrid", acceleration:"3.5 seconds", topSpeed:"305 km/h", drive:"AWD"},
+    m6:  {name:"BMW M6", image:"images/m6.jpg", price:"$45,000", year:"2018", engine:"4.4L Twin-Turbo V8", power:"560–600 HP", transmission:"DCT / Automatic", fuel:"Petrol", acceleration:"3.9–4.2 seconds", topSpeed:"250 km/h", drive:"RWD"},
+    m8:  {name:"BMW M8", image:"images/m8.jpg", price:"$140,000", year:"2025", engine:"4.4L Twin-Turbo V8", power:"617 HP", transmission:"8-speed automatic", fuel:"Petrol", acceleration:"3.0–3.2 seconds", topSpeed:"250 km/h", drive:"AWD"},
+    xm:  {name:"BMW XM", image:"images/xm.jpg", price:"$160,000", year:"2025", engine:"4.4L Twin-Turbo V8 Hybrid", power:"644–738 HP", transmission:"8-speed automatic", fuel:"Plug-in hybrid", acceleration:"3.8–4.3 seconds", topSpeed:"250–280 km/h", drive:"AWD"},
 
-    x1:  { name: "BMW X1",  image: "images/x1.jpg" },
-    x2:  { name: "BMW X2",  image: "images/x2.jpg" },
-    x3:  { name: "BMW X3",  image: "images/x3.jpg" },
-    x4:  { name: "BMW X4",  image: "images/x4.jpg" },
-    x5:  { name: "BMW X5",  image: "images/x5.jpg" },
-    x6:  { name: "BMW X6",  image: "images/x6.jpg" },
-    x7:  { name: "BMW X7",  image: "images/x7.jpg" },
+    x1:  {name:"BMW X1", image:"images/x1.jpg", price:"$40,000", year:"2025", engine:"2.0L Turbo I4", power:"241 HP", transmission:"7-speed automatic", fuel:"Petrol", acceleration:"6.2–7.2 seconds", topSpeed:"210–240 km/h", drive:"FWD / AWD"},
+    x2:  {name:"BMW X2", image:"images/x2.jpg", price:"$43,000", year:"2025", engine:"2.0L Turbo I4", power:"241–312 HP", transmission:"7-speed automatic", fuel:"Petrol", acceleration:"5.4–6.5 seconds", topSpeed:"230–250 km/h", drive:"AWD"},
+    x3:  {name:"BMW X3", image:"images/x3.jpg", price:"$50,000", year:"2025", engine:"2.0L Turbo I4", power:"255 HP", transmission:"8-speed automatic", fuel:"Petrol", acceleration:"6.0 seconds", topSpeed:"210 km/h", drive:"AWD"},
+    x4:  {name:"BMW X4", image:"images/x4.jpg", price:"$55,000", year:"2025", engine:"2.0L / 3.0L Turbo", power:"248–503 HP", transmission:"8-speed automatic", fuel:"Petrol", acceleration:"3.8–6.0 seconds", topSpeed:"210–250 km/h", drive:"AWD"},
+    x5:  {name:"BMW X5", image:"images/x5.jpg", price:"$72,000", year:"2025", engine:"3.0L Turbo I6", power:"375 HP", transmission:"8-speed automatic", fuel:"Petrol / Hybrid", acceleration:"5.3 seconds", topSpeed:"243 km/h", drive:"AWD"},
+    x6:  {name:"BMW X6", image:"images/x6.jpg", price:"$75,000", year:"2025", engine:"3.0L Turbo I6", power:"375 HP", transmission:"8-speed automatic", fuel:"Petrol / Hybrid", acceleration:"5.3 seconds", topSpeed:"243 km/h", drive:"AWD"},
+    x7:  {name:"BMW X7", image:"images/x7.jpg", price:"$85,000", year:"2025", engine:"3.0L Turbo I6", power:"375 HP", transmission:"8-speed automatic", fuel:"Petrol / Hybrid", acceleration:"5.8 seconds", topSpeed:"245 km/h", drive:"AWD"},
 
-    i4:  { name: "BMW i4",  image: "images/i4.jpg" },
-    i5:  { name: "BMW i5",  image: "images/i5.jpg" },
-    i7:  { name: "BMW i7",  image: "images/i7.jpg" },
-    ix:  { name: "BMW iX",  image: "images/ix.jpg" },
-    ix2: { name: "BMW iX2", image: "images/ix2.jpg" },
-    ix3: { name: "BMW iX3", image: "images/ix3.jpg" }
+    i4:  {name:"BMW i4", image:"images/i4.jpg", price:"$53,000", year:"2025", engine:"Fully electric", power:"335–536 HP", transmission:"Single-speed automatic", fuel:"Electric", acceleration:"3.7–5.6 seconds", topSpeed:"190–225 km/h", drive:"RWD / AWD"},
+    i5:  {name:"BMW i5", image:"images/i5.jpg", price:"$67,000", year:"2025", engine:"Fully electric", power:"335–593 HP", transmission:"Single-speed automatic", fuel:"Electric", acceleration:"3.8–6.0 seconds", topSpeed:"193–230 km/h", drive:"RWD / AWD"},
+    i7:  {name:"BMW i7", image:"images/i7.jpg", price:"$106,000", year:"2025", engine:"Fully electric", power:"449–650 HP", transmission:"Single-speed automatic", fuel:"Electric", acceleration:"3.7–5.5 seconds", topSpeed:"240–250 km/h", drive:"AWD"},
+    ix:  {name:"BMW iX", image:"images/ix.jpg", price:"$75,000", year:"2025", engine:"Fully electric", power:"402–610 HP", transmission:"Single-speed automatic", fuel:"Electric", acceleration:"3.8–5.5 seconds", topSpeed:"200–250 km/h", drive:"AWD"},
+    ix2: {name:"BMW iX2", image:"images/ix2.jpg", price:"$52,000", year:"2025", engine:"Fully electric", power:"204–313 HP", transmission:"Single-speed automatic", fuel:"Electric", acceleration:"5.6–8.6 seconds", topSpeed:"170–180 km/h", drive:"FWD / AWD"},
+    ix3: {name:"BMW iX3", image:"images/ix3.jpg", price:"$60,000", year:"2025", engine:"Fully electric", power:"286 HP", transmission:"Single-speed automatic", fuel:"Electric", acceleration:"6.8 seconds", topSpeed:"180 km/h", drive:"RWD"}
 };
 
 function toggleModels(button) {
     const card = button.closest(".category-card");
     const opened = card.classList.toggle("models-open");
-
     button.setAttribute("aria-expanded", opened);
     button.querySelector("span").textContent = opened ? "−" : "＋";
 }
@@ -318,26 +350,33 @@ function openModel(key) {
     const model = bmwModels[key];
     if (!model) return;
 
+    document.getElementById("modelTitle").textContent = model.name;
+    document.getElementById("modelPrice").textContent = model.price;
+    document.getElementById("modelYear").textContent = model.year;
+    document.getElementById("modelEngine").textContent = model.engine;
+    document.getElementById("modelPower").textContent = model.power;
+    document.getElementById("modelTransmission").textContent = model.transmission;
+    document.getElementById("modelFuel").textContent = model.fuel;
+    document.getElementById("modelAcceleration").textContent = model.acceleration;
+    document.getElementById("modelTopSpeed").textContent = model.topSpeed;
+    document.getElementById("modelDrive").textContent = model.drive;
+
     const modal = document.getElementById("modelModal");
     const photo = document.getElementById("modelPhoto");
     const error = document.getElementById("modelError");
 
-    document.getElementById("modelTitle").textContent = model.name;
-
     photo.hidden = false;
     error.hidden = true;
     photo.alt = model.name;
-    photo.src = model.image;
-
     photo.onload = function () {
         photo.hidden = false;
         error.hidden = true;
     };
-
     photo.onerror = function () {
         photo.hidden = true;
         error.hidden = false;
     };
+    photo.src = model.image;
 
     modal.classList.add("active");
     document.body.style.overflow = "hidden";
@@ -357,7 +396,10 @@ function closeModel() {
     document.getElementById("modelModal").classList.remove("active");
     document.body.style.overflow = "";
 }
+</script>
 
+
+<script>
 document.getElementById("modelModal").addEventListener("click", function (event) {
     if (event.target === this) closeModel();
 });
@@ -365,30 +407,15 @@ document.getElementById("modelModal").addEventListener("click", function (event)
 const carGalleries = {
     m4: {
         title: "BMW M4 Competition Interior",
-        images: [
-            "images/m4-interior-1.jpg",
-            "images/m4-interior-2.jpg",
-            "images/m4-interior-3.jpg",
-            "images/m4-interior-4.jpg"
-        ]
+        images: ["images/m4-interior-1.jpg", "images/m4-interior-2.jpg", "images/m4-interior-3.jpg", "images/m4-interior-4.jpg"]
     },
     m5: {
         title: "BMW M5 Interior",
-        images: [
-            "images/m5-interior-1.jpg",
-            "images/m5-interior-2.jpg",
-            "images/m5-interior-3.jpg",
-            "images/m5-interior-4.jpg"
-        ]
+        images: ["images/m5-interior-1.jpg", "images/m5-interior-2.jpg", "images/m5-interior-3.jpg", "images/m5-interior-4.jpg"]
     },
     x5: {
         title: "BMW X5 Interior",
-        images: [
-            "images/x5-interior-1.jpg",
-            "images/x5-interior-2.jpg",
-            "images/x5-interior-3.jpg",
-            "images/x5-interior-4.jpg"
-        ]
+        images: ["images/x5-interior-1.jpg", "images/x5-interior-2.jpg", "images/x5-interior-3.jpg", "images/x5-interior-4.jpg"]
     }
 };
 
@@ -448,3 +475,4 @@ document.getElementById("contactForm").addEventListener("submit", function (even
 
 </body>
 </html>
+
