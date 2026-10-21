@@ -1,0 +1,86 @@
+.cointainer {
+    display: flex;
+    background: blue;
+}
+
+.cointainer div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 35px;
+}
+
+.cointainer div:nth-child(1){
+    order: 2;
+}
+
+.cointainer div:nth-child(2){
+    order: 3;
+}
+
+.cointainer div:nth-child(3){
+    order: 0;
+}
+
+.cointainer div:nth-child(4){
+    order: 1;
+}
+
+.cointainer2 {
+    display: flex;
+    background: blue;
+    flex-direction: column-reverse;
+}
+
+.cointainer2 div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 35px;
+}
+
+.cointainer3 {
+    display: flex;
+    background: blue;
+    flex-direction: row;
+}
+
+.cointainer3 div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 35px;
+}
+
+.cointainer3 div:nth-child(1){
+    flex-grow: 4;
+}
+
+.cointainer4 {
+    display: flex;
+    background: blue;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+
+.cointainer4 div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 35px;
+    width: 30%;
+}
+
+.cointainer5 {
+    display: flex;
+    background: blue;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.cointainer5 div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 35px;
+}
