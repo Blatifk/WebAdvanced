@@ -579,3 +579,42 @@ footer .copyright {
 
 }
 
+@media (max-width : 480px) {
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .nav-links {
+        gap: 10px 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero-h2 {
+        font-size: 33px;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        height: 230px;
+    }
+
+    .contact-info {
+        padding: 25px;
+    }
+
+    .promotion h2 {
+        font-size: 30px;
+    }
+}
+
