@@ -25,7 +25,6 @@ section {
     padding: 50px 8%;
 }
 
-/* HEADER */
 
 header {
     background-color: #222;
@@ -61,7 +60,6 @@ footer span {
     color: #e65c00;
 }
 
-/* HOME */
 
 .hero {
     background-color: #eee;
@@ -89,7 +87,6 @@ footer span {
     padding: 10px 20px;
 }
 
-/* TITLES */
 
 .section-title {
     text-align: center;
@@ -102,7 +99,6 @@ footer span {
     margin-bottom: 30px;
 }
 
-/* CATEGORIES */
 
 .category-container {
     display: grid;
@@ -126,7 +122,6 @@ footer span {
     padding: 10px;
 }
 
-/* PRODUCTS */
 
 .gray-section {
     background-color: #f3f3f3;
@@ -174,7 +169,6 @@ footer span {
     display: inline-block;
 }
 
-/* PROMOTION */
 
 .promotion {
     background-color: #333;
@@ -190,7 +184,6 @@ footer span {
     margin-bottom: 20px;
 }
 
-/* ABOUT */
 
 .about {
     display: grid;
@@ -214,8 +207,6 @@ footer span {
     margin-bottom: 15px;
 }
 
-/* FEATURES */
-
 .feature-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -233,8 +224,6 @@ footer span {
 .feature-card h3 {
     margin-bottom: 10px;
 }
-
-/* CONTACT */
 
 .contact-container {
     display: grid;
@@ -276,7 +265,6 @@ footer span {
     cursor: pointer;
 }
 
-/* FOOTER */
 
 footer {
     background-color: #222;
@@ -289,7 +277,6 @@ footer h2 {
     margin-bottom: 10px;
 }
 
-/* MOBILE */
 
 @media (max-width: 768px) {
 
