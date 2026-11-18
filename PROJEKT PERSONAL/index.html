@@ -1,487 +1,363 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>FITZONE | Fitness Store</title>
-
+    <title>FITZONE | Premium Fitness Store</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<header>
+    <nav class="navbar">
+        <h1 class="logo">FIT<span>ZONE</span></h1>
 
-    <header>
-        <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-            <h1 class="logo">FIT<span>ZONE</span></h1>
+        <a href="#products" class="nav-btn">SHOP NOW</a>
+    </nav>
+</header>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
+<!-- HERO -->
 
-            <a href="#products" class="nav-btn">Shop Now</a>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="subtitle">WELCOME TO FITZONE</p>
 
-        </nav>
-    </header>
+        <h2>
+            PUSH YOUR LIMITS.
+            <br>
+            <span>BUILD YOUR FUTURE.</span>
+        </h2>
 
-
-
-    <section class="hero" id="home">
-
-        <div class="hero-content">
-
-            <p class="subtitle">WELCOME TO FITZONE</p>
-
-            <h2>
-                BUILD YOUR BODY.
-                <br>
-                <span>BUILD YOUR FUTURE.</span>
-            </h2>
-
-            <p class="hero-text">
-                Everything you need to achieve your fitness goals.
-                Discover premium fitness equipment, sportswear
-                and supplements at FITZONE.
-            </p>
-
-            <a href="#products" class="main-btn">
-                Explore Products
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-    <section class="categories" id="categories">
-
-        <h2 class="section-title">OUR CATEGORIES</h2>
-
-        <p class="section-description">
-            Everything for your fitness lifestyle.
+        <p class="hero-text">
+            Discover premium fitness equipment, sportswear
+            and accessories. Everything you need to become
+            stronger and achieve your fitness goals.
         </p>
 
-        <div class="category-container">
+        <a href="#products" class="main-btn">EXPLORE PRODUCTS</a>
+    </div>
 
-            <div class="category-card">
-                <img src="images/gym.jpg" alt="Gym Equipment">
-                <h3>Gym Equipment</h3>
+    <div class="hero-badge">
+        <span>100%</span>
+        <p>FITNESS<br>LIFESTYLE</p>
+    </div>
+</section>
+
+<!-- CATEGORIES -->
+
+<section class="categories" id="categories">
+
+    <p class="section-label">WHAT WE OFFER</p>
+    <h2 class="section-title">OUR CATEGORIES</h2>
+    <p class="section-description">
+        Everything you need for your fitness lifestyle.
+    </p>
+
+    <div class="category-container">
+
+        <div class="category-card">
+            <img src="images/gym.jpg" alt="Gym Equipment">
+            <div class="category-overlay">
+                <h3>GYM EQUIPMENT</h3>
+                <p>Train harder. Get stronger.</p>
             </div>
-
-            <div class="category-card">
-                <img src="images/sportswear.jpg" alt="Sportswear">
-                <h3>Sportswear</h3>
-            </div>
-
-            <div class="category-card">
-                <img src="images/supplements.jpg" alt="Supplements">
-                <h3>Supplements</h3>
-            </div>
-
         </div>
 
-    </section>
+        <div class="category-card">
+            <img src="images/sportswear.jpg" alt="Sportswear">
+            <div class="category-overlay">
+                <h3>SPORTSWEAR</h3>
+                <p>Style meets performance.</p>
+            </div>
+        </div>
 
+        <div class="category-card">
+            <img src="images/shoes.jpg" alt="Training Shoes">
+            <div class="category-overlay">
+                <h3>FOOTWEAR</h3>
+                <p>Every step matters.</p>
+            </div>
+        </div>
 
+    </div>
+</section>
 
-    <section class="products" id="products">
+<!-- PRODUCTS -->
 
-        <h2 class="section-title">OUR BEST SELLERS</h2>
+<section class="products" id="products">
 
-        <p class="section-description">
-            Discover our most popular fitness products.
-        </p>
+    <p class="section-label">OUR COLLECTION</p>
+    <h2 class="section-title">BEST SELLERS</h2>
+    <p class="section-description">
+        Discover our most popular fitness products.
+    </p>
 
-        <div class="product-container">
+    <div class="product-container">
 
-
-            <div class="product-card">
-
+        <div class="product-card">
+            <div class="product-image">
                 <img src="images/dumbbells.jpg" alt="Dumbbells">
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Equipment
-                    </span>
-
-                    <h3>Premium Dumbbells</h3>
-
-                    <p>
-                        Professional dumbbells for your
-                        home workout.
-                    </p>
-
-                    <div class="price">$49.99</div>
-
-                    <a href="#contact" class="buy-btn">
-                        Buy Now
-                    </a>
-
-                </div>
-
+                <span class="product-tag">POPULAR</span>
             </div>
 
+            <div class="product-info">
+                <span class="product-category">EQUIPMENT</span>
+                <h3>Premium Dumbbells</h3>
+                <p>Professional dumbbells for your home workout.</p>
+                <div class="product-bottom">
+                    <span class="price">$49.99</span>
+                    <a href="#contact" class="buy-btn">BUY NOW</a>
+                </div>
+            </div>
+        </div>
 
-            <div class="product-card">
-
+        <div class="product-card">
+            <div class="product-image">
                 <img src="images/protein.jpg" alt="Whey Protein">
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Nutrition
-                    </span>
-
-                    <h3>Whey Protein</h3>
-
-                    <p>
-                        Protein supplement for your
-                        daily nutrition.
-                    </p>
-
-                    <div class="price">$39.99</div>
-
-                    <a href="#contact" class="buy-btn">
-                        Buy Now
-                    </a>
-
-                </div>
-
+                <span class="product-tag">BEST SELLER</span>
             </div>
 
+            <div class="product-info">
+                <span class="product-category">NUTRITION</span>
+                <h3>Whey Protein</h3>
+                <p>Protein supplement for your daily nutrition.</p>
+                <div class="product-bottom">
+                    <span class="price">$39.99</span>
+                    <a href="#contact" class="buy-btn">BUY NOW</a>
+                </div>
+            </div>
+        </div>
 
-            <div class="product-card">
-
+        <div class="product-card">
+            <div class="product-image">
                 <img src="images/creatine.jpg" alt="Creatine">
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Supplements
-                    </span>
-
-                    <h3>Pure Creatine</h3>
-
-                    <p>
-                        Creatine monohydrate for
-                        your fitness routine.
-                    </p>
-
-                    <div class="price">$24.99</div>
-
-                    <a href="#contact" class="buy-btn">
-                        Buy Now
-                    </a>
-
-                </div>
-
             </div>
 
+            <div class="product-info">
+                <span class="product-category">SUPPLEMENTS</span>
+                <h3>Pure Creatine</h3>
+                <p>Creatine monohydrate for your fitness routine.</p>
+                <div class="product-bottom">
+                    <span class="price">$24.99</span>
+                    <a href="#contact" class="buy-btn">BUY NOW</a>
+                </div>
+            </div>
+        </div>
 
-            <div class="product-card">
-
+        <div class="product-card">
+            <div class="product-image">
                 <img src="images/accessories.jpg" alt="Gym Accessories">
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Equipment
-                    </span>
-
-                    <h3>Workout Accessories</h3>
-
-                    <p>
-                        Essential accessories for
-                        better workouts.
-                    </p>
-
-                    <div class="price">$19.99</div>
-
-                    <a href="#contact" class="buy-btn">
-                        Buy Now
-                    </a>
-
-                </div>
-
             </div>
 
+            <div class="product-info">
+                <span class="product-category">EQUIPMENT</span>
+                <h3>Workout Accessories</h3>
+                <p>Essential accessories for better workouts.</p>
+                <div class="product-bottom">
+                    <span class="price">$19.99</span>
+                    <a href="#contact" class="buy-btn">BUY NOW</a>
+                </div>
+            </div>
+        </div>
 
-            <div class="product-card">
-
+        <div class="product-card">
+            <div class="product-image">
                 <img src="images/shoes.jpg" alt="Training Shoes">
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Footwear
-                    </span>
-
-                    <h3>Training Shoes</h3>
-
-                    <p>
-                        Comfortable shoes for every
-                        training session.
-                    </p>
-
-                    <div class="price">$69.99</div>
-
-                    <a href="#contact" class="buy-btn">
-                        Buy Now
-                    </a>
-
-                </div>
-
             </div>
 
+            <div class="product-info">
+                <span class="product-category">FOOTWEAR</span>
+                <h3>Training Shoes</h3>
+                <p>Comfortable shoes for every training session.</p>
+                <div class="product-bottom">
+                    <span class="price">$69.99</span>
+                    <a href="#contact" class="buy-btn">BUY NOW</a>
+                </div>
+            </div>
+        </div>
 
-            <div class="product-card">
-
+        <div class="product-card">
+            <div class="product-image">
                 <img src="images/tshirt.jpg" alt="Gym T-Shirt">
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Clothing
-                    </span>
-
-                    <h3>Gym T-Shirt</h3>
-
-                    <p>
-                        Modern and comfortable
-                        sportswear.
-                    </p>
-
-                    <div class="price">$29.99</div>
-
-                    <a href="#contact" class="buy-btn">
-                        Buy Now
-                    </a>
-
-                </div>
-
             </div>
 
+            <div class="product-info">
+                <span class="product-category">CLOTHING</span>
+                <h3>Gym T-Shirt</h3>
+                <p>Modern and comfortable sportswear.</p>
+                <div class="product-bottom">
+                    <span class="price">$29.99</span>
+                    <a href="#contact" class="buy-btn">BUY NOW</a>
+                </div>
+            </div>
         </div>
 
-    </section>
+    </div>
+</section>
 
+<!-- PROMOTION -->
 
+<section class="promotion">
+    <div class="promotion-content">
+        <p class="section-label">YOUR TIME IS NOW</p>
+        <h2>NO EXCUSES.<br><span>JUST RESULTS.</span></h2>
+        <p>Upgrade your fitness lifestyle with FITZONE.</p>
+        <a href="#products" class="main-btn">SHOP COLLECTION</a>
+    </div>
+</section>
 
-    <section class="promotion">
+<!-- ABOUT -->
 
-        <div class="promotion-content">
+<section class="about" id="about">
 
-            <h2>NO EXCUSES. JUST RESULTS.</h2>
+    <div class="about-image">
+        <img src="images/gym-about.jpg" alt="FITZONE Gym">
+        <div class="image-box">FITZONE</div>
+    </div>
 
-            <p>
-                Upgrade your fitness lifestyle with FITZONE.
-            </p>
+    <div class="about-content">
+        <p class="section-label">WHO WE ARE</p>
 
-            <a href="#products" class="main-btn">
-                Shop Collection
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-    <section class="about" id="about">
-
-        <div class="about-image">
-
-            <img src="images/gym-about.jpg" alt="FITZONE Gym">
-
-        </div>
-
-
-        <div class="about-content">
-
-            <p class="subtitle">WHO WE ARE</p>
-
-            <h2>
-                ABOUT <span>FITZONE</span>
-            </h2>
-
-            <p>
-                FITZONE is an online fitness store created
-                for people who want to improve their lifestyle
-                and reach their fitness goals.
-            </p>
-
-            <p>
-                Our mission is to provide quality gym equipment,
-                comfortable sportswear and fitness supplements
-                in one place.
-            </p>
-
-            <p>
-                Whether you are a beginner or a professional
-                athlete, FITZONE is here to support your
-                fitness journey.
-            </p>
-
-            <a href="#contact" class="main-btn">
-                Contact Us
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-    <section class="features">
-
-        <h2 class="section-title">
-            WHY CHOOSE FITZONE?
+        <h2>MORE THAN A STORE.<br>
+            <span>A LIFESTYLE.</span>
         </h2>
 
-        <div class="feature-container">
-
-            <div class="feature-card">
-
-                <div class="feature-icon"></div>
-
-                <h3>Fast Delivery</h3>
-
-                <p>
-                    Quick and reliable delivery to your door.
-                </p>
-
-            </div>
-
-
-            <div class="feature-card">
-
-                <div class="feature-icon"></div>
-
-                <h3>Premium Quality</h3>
-
-                <p>
-                    Quality products for your fitness journey.
-                </p>
-
-            </div>
-
-
-            <div class="feature-card">
-
-                <div class="feature-icon"></div>
-
-                <h3>Fitness Lifestyle</h3>
-
-                <p>
-                    Everything you need to stay motivated.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <section class="contact" id="contact">
-
-        <h2 class="section-title">CONTACT US</h2>
-
-        <p class="section-description">
-            Have a question? We would love to hear from you!
+        <p>
+            FITZONE is an online fitness store created for
+            people who want to improve their lifestyle and
+            achieve their fitness goals.
         </p>
 
-
-        <div class="contact-container">
-
-
-            <div class="contact-info">
-
-                <h3>Get In Touch</h3>
-
-                <p> Address: Prishtina, Kosovo</p>
-
-                <p> Email: info@fitzone.com</p>
-
-                <p> Phone: +383 44 123 456</p>
-
-                <p> Working Hours: 09:00 - 20:00</p>
-
-
-                <div class="social-links">
-
-                    <a href="#">Instagram</a>
-
-                    <a href="#">Facebook</a>
-
-                    <a href="#">TikTok</a>
-
-                </div>
-
-            </div>
-
-
-            <form class="contact-form">
-
-                <input
-                    type="text"
-                    placeholder="Your Name"
-                    required
-                >
-
-                <input
-                    type="email"
-                    placeholder="Your Email"
-                    required
-                >
-
-                <input
-                    type="text"
-                    placeholder="Subject"
-                    required
-                >
-
-                <textarea
-                    rows="6"
-                    placeholder="Write your message..."
-                    required
-                ></textarea>
-
-                <button type="submit">
-                    Send Message
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>
-
-
-
-    <footer>
-
-        <h2 class="logo">
-            FIT<span>ZONE</span>
-        </h2>
-
-        <p>Your Fitness Journey Starts Here.</p>
-
-        <p class="copyright">
-            © 2026 FITZONE. All Rights Reserved.
+        <p>
+            Our mission is to provide quality gym equipment,
+            comfortable sportswear and fitness accessories
+            in one place.
         </p>
 
-    </footer>
+        <p>
+            Whether you are a beginner or a professional
+            athlete, FITZONE supports your fitness journey.
+        </p>
 
+        <a href="#contact" class="main-btn">CONTACT US</a>
+    </div>
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <p class="section-label">THE FITZONE ADVANTAGE</p>
+    <h2 class="section-title">WHY CHOOSE US?</h2>
+
+    <div class="feature-container">
+
+        <div class="feature-card">
+            <div class="feature-icon">🚚</div>
+            <h3>Fast Delivery</h3>
+            <p>Quick and reliable delivery directly to your door.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>Premium Quality</h3>
+            <p>Carefully selected products for your fitness journey.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">💪</div>
+            <h3>Fitness Lifestyle</h3>
+            <p>Everything you need to stay active and motivated.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <p class="section-label">LET'S TALK</p>
+    <h2 class="section-title">GET IN TOUCH</h2>
+
+    <p class="section-description">
+        Have a question? We would love to hear from you!
+    </p>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <h3>CONTACT INFORMATION</h3>
+
+            <div class="info-item">
+                <span>📍</span>
+                <p>Prishtina, Kosovo</p>
+            </div>
+
+            <div class="info-item">
+                <span>✉️</span>
+                <p>info@fitzone.com</p>
+            </div>
+
+            <div class="info-item">
+                <span>📞</span>
+                <p>+383 44 123 456</p>
+            </div>
+
+            <div class="info-item">
+                <span>🕒</span>
+                <p>09:00 - 20:00</p>
+            </div>
+
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <input type="text" placeholder="Subject" required>
+
+            <textarea rows="6"
+                placeholder="Write your message..."
+                required></textarea>
+
+            <button type="submit">SEND MESSAGE →</button>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <h2 class="logo">FIT<span>ZONE</span></h2>
+
+    <p>Your Fitness Journey Starts Here.</p>
+
+    <div class="footer-line"></div>
+
+    <p class="copyright">
+        © 2026 FITZONE. All Rights Reserved.
+    </p>
+</footer>
 
 </body>
 </html>
